@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Landing Page</title>
+    <style>
+        /* CSS reset and base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Typography */
+        h1 { font-size: 3rem; margin-bottom: 20px; color: #1a1a1a; line-height: 1.2; }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+        p { margin-bottom: 20px; color: #666; font-size: 1.1rem; }
+        
+        /* Buttons */
+        .btn { display: inline-block; padding: 12px 28px; background: #007bff; color: #fff; border-radius: 30px; font-weight: bold; transition: background 0.3s; text-align: center; }
+        .btn:hover { background: #0056b3; }
+        .btn-outline { background: transparent; border: 2px solid #007bff; color: #007bff; }
+        .btn-outline:hover { background: #007bff; color: #fff; }
+
+        /* Navbar */
+        header { padding: 20px 0; border-bottom: 1px solid #eee; background: #fff; position: sticky; top: 0; z-index: 100; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #007bff; }
+        nav a { margin-left: 20px; font-weight: 500; }
+        nav a:hover { color: #007bff; }
+        
+        /* Hero Section */
+        .hero { padding: 80px 0; display: flex; align-items: center; gap: 40px; }
+        .hero-content { flex: 1; }
+        .hero-image { flex: 1; background: #eef2f5; border-radius: 20px; height: 450px; display: flex; align-items: center; justify-content: center; color: #aaa; border: 2px dashed #ccc; }
+        
+        /* Features Section */
+        .features { padding: 80px 0; background: #f9f9f9; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { background: #fff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); }
+        .feature-card h3 { margin-bottom: 15px; color: #1a1a1a; }
+        
+        /* Screenshots Section */
+        .screenshots { padding: 80px 0; }
+        .screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .screenshot-item { background: #eef2f5; height: 450px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: #888; border: 2px dashed #ccc; }
+        
+        /* Testimonials Section */
+        .testimonials { padding: 80px 0; background: #007bff; color: #fff; }
+        .testimonials h2 { color: #fff; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial-card { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; }
+        .testimonial-text { font-style: italic; margin-bottom: 20px; color: #f8f9fa; font-size: 1.1rem; }
+        .testimonial-author { font-weight: bold; font-size: 1.05rem; }
+        
+        /* Footer */
+        footer { padding: 40px 0; text-align: center; background: #1a1a1a; color: #fff; }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; padding: 40px 0; }
+            h1 { font-size: 2.2rem; }
+            .hero-image { width: 100%; height: 350px; }
+            nav { display: none; /* Can be replaced with a hamburger menu later */ }
+            .hero-content .btn { display: block; margin-bottom: 15px; width: 100%; }
+            .hero-content div { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">AppLaunch</div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#download" class="btn" style="color: white;">Download Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <h1>The Ultimate Solution for Your Daily Needs</h1>
+            <p>Experience seamless performance and stunning design. Download our app today and transform the way you interact with your digital life.</p>
+            <div style="display: flex; gap: 15px; margin-top: 30px;">
+                <a href="#" class="btn">Get it on App Store</a>
+                <a href="#" class="btn btn-outline">Get it on Google Play</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            [Insert App Hero Mockup / Image Here]
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose Our App?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Blazing Fast</h3>
+                    <p>Optimized for top-tier performance, ensuring you never have to wait during your workflow.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Secure & Private</h3>
+                    <p>Your data is heavily encrypted and protected with industry-leading security protocols.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Intuitive Design</h3>
+                    <p>A clean, visually appealing interface that makes navigation an absolute breeze.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots container">
+        <h2>Inside the App</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">[App Screenshot 1]</div>
+            <div class="screenshot-item">[App Screenshot 2]</div>
+            <div class="screenshot-item">[App Screenshot 3]</div>
+            <div class="screenshot-item">[App Screenshot 4]</div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"This app completely changed my routine. It's incredibly fast, responsive, and easy to use!"</div>
+                    <div class="testimonial-author">- Sarah J.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"The design is gorgeous, and the feature set is exactly what I was looking for. Five stars."</div>
+                    <div class="testimonial-author">- Mike T.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"Highly recommended. The developers really paid attention to the UI details."</div>
+                    <div class="testimonial-author">- Emily R.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AppLaunch. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
